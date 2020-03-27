@@ -5,7 +5,9 @@ public class Player : KinematicBody2D
 {
 	private const float SPEED = 70*4;
 	Vector2 movedir = new Vector2(0,0);
+	string spritedir = "down";
 	
+	// Смотрим за нажатиями
 	public void controls_loop(){
 		var LEFT  = Input.IsActionPressed("ui_left");
 		var RIGHT = Input.IsActionPressed("ui_right");
