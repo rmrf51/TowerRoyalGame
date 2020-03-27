@@ -23,6 +23,33 @@ public class Player : KinematicBody2D
 		MoveAndSlide(motion, new Vector2(0,0));
 	}
 	
+	public void spritedir_loop(){
+		/*switch (movedir){
+			case (new Vector2(-1,0)):
+				spritedir = "left";
+				break;
+			case (new Vector2(1,0)):
+				spritedir = "right";
+				break;
+			case (new Vector2(0,-1)):
+				spritedir = "up";
+				break;
+			case (new Vector2(0,1)):
+				spritedir = "down";
+				break;
+		}	*/
+		
+		if(movedir == new Vector2(-1,0)){
+			spritedir = "left";
+		} else if(movedir == new Vector2(1,0)){
+			spritedir = "right";
+		} else if(movedir == new Vector2(0,-1)){
+			spritedir = "up";
+		} else if(movedir == new Vector2(0,1)){
+			spritedir = "down";
+		}
+	}
+	
 	public override void _Ready()
 	{
 		GetViewport().Connect("size_changed", this, "window_resize");
@@ -32,6 +59,9 @@ public class Player : KinematicBody2D
 	public override void _PhysicsProcess(float delta){
 		controls_loop();
 		movement_loop();
+		spritedir_loop();
+		
+		GD.Print(spritedir);
 	}
 
 //  // Called every frame. 'delta' is the elapsed time since the previous frame.

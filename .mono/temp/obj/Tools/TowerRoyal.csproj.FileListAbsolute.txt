@@ -4,3 +4,8 @@
 /home/rmrf51/Workspace/TowerRoyal/.mono/temp/bin/Tools/TowerRoyal.pdb
 /home/rmrf51/Workspace/TowerRoyal/.mono/temp/obj/Tools/TowerRoyal.dll
 /home/rmrf51/Workspace/TowerRoyal/.mono/temp/obj/Tools/TowerRoyal.pdb
+D:\workspace\godot32\projects\TowerRoyalGame\.mono\temp\obj\Tools\TowerRoyal.csprojAssemblyReference.cache
+D:\workspace\godot32\projects\TowerRoyalGame\.mono\temp\obj\Tools\TowerRoyal.dll
+D:\workspace\godot32\projects\TowerRoyalGame\.mono\temp\obj\Tools\TowerRoyal.pdb
+D:\workspace\godot32\projects\TowerRoyalGame\.mono\temp\bin\Tools\TowerRoyal.dll
+D:\workspace\godot32\projects\TowerRoyalGame\.mono\temp\bin\Tools\TowerRoyal.pdb
