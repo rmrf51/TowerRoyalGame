@@ -1,0 +1,6 @@
+/home/rmrf51/Workspace/TowerRoyal/.mono/temp/obj/Tools/TowerRoyal.csprojAssemblyReference.cache
+/home/rmrf51/Workspace/TowerRoyal/.mono/temp/obj/Tools/TowerRoyal.csproj.CoreCompileInputs.cache
+/home/rmrf51/Workspace/TowerRoyal/.mono/temp/bin/Tools/TowerRoyal.dll
+/home/rmrf51/Workspace/TowerRoyal/.mono/temp/bin/Tools/TowerRoyal.pdb
+/home/rmrf51/Workspace/TowerRoyal/.mono/temp/obj/Tools/TowerRoyal.dll
+/home/rmrf51/Workspace/TowerRoyal/.mono/temp/obj/Tools/TowerRoyal.pdb
