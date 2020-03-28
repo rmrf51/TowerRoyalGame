@@ -24,29 +24,24 @@ public class Player : KinematicBody2D
 	}
 	
 	public void spritedir_loop(){
-		/*switch (movedir){
-			case (new Vector2(-1,0)):
-				spritedir = "left";
-				break;
-			case (new Vector2(1,0)):
-				spritedir = "right";
-				break;
-			case (new Vector2(0,-1)):
-				spritedir = "up";
-				break;
-			case (new Vector2(0,1)):
-				spritedir = "down";
-				break;
-		}	*/
 		
 		if(movedir == new Vector2(-1,0)){
-			spritedir = "left";
+			spritedir = "Left";
 		} else if(movedir == new Vector2(1,0)){
-			spritedir = "right";
+			spritedir = "Right";
 		} else if(movedir == new Vector2(0,-1)){
-			spritedir = "up";
+			spritedir = "Up";
 		} else if(movedir == new Vector2(0,1)){
-			spritedir = "down";
+			spritedir = "Down";
+		}
+	}
+	
+	public void anim_switch(string animation){
+		var animPlayer = GetNode<AnimationPlayer>("Anim");
+		string newanim = animation.ToString() + spritedir;
+		
+		if(animPlayer.CurrentAnimation != newanim){
+			animPlayer.Play(newanim);
 		}
 	}
 	
@@ -61,7 +56,13 @@ public class Player : KinematicBody2D
 		movement_loop();
 		spritedir_loop();
 		
-		GD.Print(spritedir);
+		if(movedir != new Vector2(0,0)){
+			anim_switch("walk");
+		} else {
+			anim_switch("idle");
+		}
+		
+		//GD.Print(spritedir);
 	}
 
 //  // Called every frame. 'delta' is the elapsed time since the previous frame.
