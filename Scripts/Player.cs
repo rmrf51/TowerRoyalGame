@@ -8,12 +8,13 @@ public class Player : KinematicBody2D
 	private const float SPEED = 70*4;
 	Vector2 movedir = new Vector2(0,0);
 	string spritedir = "down";
+	int count = 0;
 	
 	
 	////////////
-	string IP_SERVER = "127.0.0.1"; //"34.202.96.244"
+	string IP_SERVER = "192.168.100.8";//"109.252.37.142";//"127.0.0.1"; //"34.202.96.244"
 	int PORT_SERVER = 27000;
-	int PORT_CLIENT = 1509;
+	int PORT_CLIENT = 1510;
 	PacketPeerUDP socketUDP = new PacketPeerUDP();
 	///////////
 	
@@ -39,9 +40,10 @@ public class Player : KinematicBody2D
 			spritedir = "Left";
 			///////
 			socketUDP.SetDestAddress(IP_SERVER, PORT_SERVER);
-			string stg = "hi server!";
+			string stg = "Ya ushel mitsya!";//"I love you " + count + " times more!!!!";
 			byte[] mesBytes = Encoding.ASCII.GetBytes(stg);
 			socketUDP.PutPacket(mesBytes);
+			count++;
 			GD.Print("send!");
 			////
 		} else if(movedir == new Vector2(1,0)){
