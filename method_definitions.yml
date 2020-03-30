@@ -1,0 +1,376 @@
+authenticate_device:
+  id:
+    type: String
+  create:
+    type: bool
+    default: false
+    required: true
+  username:
+    type: String
+    default: ''
+authenticate_email:
+  email:
+    type: String
+  password:
+    type: String
+  create:
+    type: bool
+    default: false
+    required: true
+  username:
+    type: String
+    default: ''
+authenticate_facebook:
+  token:
+    type: String
+  create:
+    type: bool
+    default: false
+    required: true
+  username:
+    type: String
+    default: ''
+  import:
+    type: bool
+    default: false
+authenticate_google:
+  token:
+    type: String
+  create:
+    type: bool
+    default: false
+    required: true
+  username:
+    type: String
+    default: ''
+authenticate_gamecenter:
+  player_id:
+    type: String
+  bundle_id:
+    type: String
+  timestamp_seconds:
+    type: int
+  salt:
+    type: String
+  signature:
+    type: String
+  public_key_url:
+    type: String
+  create:
+    type: bool
+    default: false
+    required: true
+  username:
+    type: String
+    default: ''
+authenticate_steam:
+  token:
+    type: String
+  create:
+    type: bool
+    default: false
+    required: true
+  username:
+    type: String
+    default: ''
+authenticate_custom:
+  id:
+    type: String
+  create:
+    type: bool
+    default: false
+    required: true
+  username:
+    type: String
+    default: ''
+link_device:
+  id:
+    type: String
+link_email:
+  email:
+    type: String
+  password:
+    type: String
+link_facebook:
+  token:
+    type: String
+  import:
+    type: bool
+    default: false
+link_google:
+  token:
+    type: String
+link_gamecenter:
+  player_id:
+    type: String
+  bundle_id:
+    type: String
+  timestamp_seconds:
+    type: int
+  salt:
+    type: String
+  signature:
+    type: String
+  public_key_url:
+    type: String
+link_steam:
+  token:
+    type: String
+link_custom:
+  id:
+    type: String
+unlink_device:
+  id:
+    type: String
+unlink_email:
+  email:
+    type: String
+  password:
+    type: String
+unlink_facebook:
+  token:
+    type: String
+  import:
+    type: bool
+    default: false
+unlink_google:
+  token:
+    type: String
+unlink_gamecenter:
+  player_id:
+    type: String
+  bundle_id:
+    type: String
+  timestamp_seconds:
+    type: int
+  salt:
+    type: String
+  signature:
+    type: String
+  public_key_url:
+    type: String
+unlink_steam:
+  token:
+    type: String
+unlink_custom:
+  id:
+    type: String
+get_account: {}
+update_account:
+  data:
+    type: Dictionary
+get_users:
+  ids:
+    type: Array
+    default: []
+  usernames:
+    type: Array
+    default: []
+  facebook_ids:
+    type: Array
+    default: []
+import_facebook_friends:
+  token:
+    type: String
+  reset:
+    type: bool
+write_storage_objects:
+  objects:
+    type: Array
+read_storage_objects:
+  object_ids:
+    type: Array
+list_storage_objects:
+  collection:
+    type: String
+  user_id:
+    type: String
+    default: ''
+  limit:
+    type: int
+    default: 100
+    required: true
+  cursor:
+    type: String
+    default: ''
+delete_storage_objects:
+  object_ids:
+    type: Array
+add_friends:
+  ids:
+    type: Array
+    default: []
+  usernames:
+    type: Array
+    default: []
+list_friends: {}
+delete_friends:
+  ids:
+    type: Array
+    default: []
+  usernames:
+    type: Array
+    default: []
+block_friends:
+  ids:
+    type: Array
+    default: []
+  usernames:
+    type: Array
+    default: []
+list_groups:
+  name:
+    type: String
+  limit:
+    type: int
+    default: 100
+  cursor:
+    type: String
+    default: ''
+join_group:
+  group_id:
+    type: String
+list_user_groups:
+  user_id:
+    type: String
+list_group_users:
+  group_id:
+    type: String
+create_group:
+  data:
+    type: Dictionary
+update_group:
+  group_id:
+    type: String
+  data:
+    type: Dictionary
+leave_group:
+  group_id:
+    type: String
+add_group_users:
+  group_id:
+    type: String
+  user_ids:
+    type: Array
+promote_group_users:
+  group_id:
+    type: String
+  user_ids:
+    type: Array
+kick_group_users:
+  group_id:
+    type: String
+  user_ids:
+    type: Array
+delete_group:
+  group_id:
+    type: String
+list_notifications:
+  limit:
+    type: int
+    default: 100
+  cursor:
+    type: String
+    default: ''
+delete_notifications:
+  ids:
+    type: Array
+list_channel_messages:
+  channel_id:
+    type: String
+  limit:
+    type: int
+    default: 100
+  cursor:
+    type: String
+    default: ''
+write_leaderboard_record:
+  leaderboard_id:
+    type: String
+  record:
+    type: Dictionary
+list_leaderboard_records:
+  leaderboard_id:
+    type: String
+  owner_ids:
+    type: Array
+    default: []
+  cursor:
+    type: String
+    default: ''
+list_leaderboard_records_around_owner:
+  leaderboard_id:
+    type: String
+  owner_id:
+    type: String
+  limit:
+    type: int
+delete_leaderboard_record:
+  leaderboard_id:
+    type: String
+list_tournaments:
+  category_start:
+    type: int
+  category_end:
+    type: int
+  start_time:
+    type: int
+  end_type:
+    type: int
+    default: -1
+  limit:
+    type: int
+    default: 100
+  cursor:
+    type: String
+    default: ''
+join_tournament:
+  tournament_id:
+    type: String
+list_tournament_records:
+  tournament_id:
+    type: String
+  owner_ids:
+    type: Array
+    default: []
+  limit:
+    type: int
+    default: 100
+  cursor:
+    type: String
+    default: ''
+list_tournament_records_around_owner:
+  tournament_id:
+    type: String
+  owner_id:
+    type: String
+  limit:
+    type: int
+write_tournament_record:
+  tournament_id:
+    type: String
+  score:
+    type: int
+  subscore:
+    type: int
+  metadata:
+    type: Dictionary
+list_matches:
+  limit:
+    type: int
+  authoritative:
+    type: bool
+  label:
+    type: String
+  min_size:
+    type: int
+  max_size:
+    type: int
+  query:
+    type: String
+#rpc_func:
+#  id:
+#    type: String
+#  data:
+#    type: Dictionary
+

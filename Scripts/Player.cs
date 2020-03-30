@@ -2,21 +2,12 @@ using Godot;
 using System;
 using System.Text;
 
-
 public class Player : KinematicBody2D
 {
 	private const float SPEED = 70*4;
 	Vector2 movedir = new Vector2(0,0);
 	string spritedir = "down";
 	int count = 0;
-	
-	
-	////////////
-	//string IP_SERVER = "192.168.100.8";//"109.252.37.142";//"127.0.0.1"; //"34.202.96.244"
-	//int PORT_SERVER = 27000;
-	//int PORT_CLIENT = 1510;
-	//PacketPeerUDP socketUDP = new PacketPeerUDP();
-	///////////
 	
 	// Смотрим за нажатиями
 	public void controls_loop(){
@@ -38,14 +29,6 @@ public class Player : KinematicBody2D
 		
 		if(movedir == new Vector2(-1,0)){
 			spritedir = "Left";
-			/*
-			socketUDP.SetDestAddress(IP_SERVER, PORT_SERVER);
-			string stg = "Ya ushel mitsya!";//"I love you " + count + " times more!!!!";
-			byte[] mesBytes = Encoding.ASCII.GetBytes(stg);
-			socketUDP.PutPacket(mesBytes);
-			count++;
-			GD.Print("send!");
-			*/
 		} else if(movedir == new Vector2(1,0)){
 			spritedir = "Right";
 		} else if(movedir == new Vector2(0,-1)){
@@ -80,15 +63,7 @@ public class Player : KinematicBody2D
 		} else {
 			anim_switch("idle");
 		}
-		//GD.Print(spritedir);
 	}
-	
-	
+}
 	
 
-//  // Called every frame. 'delta' is the elapsed time since the previous frame.
-//  public override void _Process(float delta)
-//  {
-//      
-//  }
-}
