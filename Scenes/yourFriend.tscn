@@ -3,9 +3,7 @@
 [ext_resource path="res://Scripts/yourFrieng.cs" type="Script" id=1]
 [ext_resource path="res://Sprite/Grass/grass1.png" type="Texture" id=2]
 
-[node name="Node" type="Node"]
-
-[node name="Sprite" type="Sprite" parent="."]
-position = Vector2( 712.64, 74.6464 )
+[node name="yourFriend" type="Sprite"]
+position = Vector2( 682.314, 81.6445 )
 texture = ExtResource( 2 )
 script = ExtResource( 1 )
